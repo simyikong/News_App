@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="421dp"
+                android:layout_height="737dp"
+                android:background="#F5DDFA">
+
+                <LinearLayout
+                    android:layout_width="99dp"
+                    android:layout_height="47dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#F2F4F4"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageButton
+                        android:id="@+id/homeButton"
+                        android:layout_width="33dp"
+                        android:layout_height="42dp"
+                        android:background="@drawable/ic_home"
+                        android:contentDescription="Home Button"
+                        android:onClick="goToHome" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingStart="8dp"
+                        android:text="Home" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/IVFeedback"
+                    android:layout_width="0dp"
+                    android:layout_height="241dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginBottom="260dp"
+                    android:backgroundTint="#E0B3E8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/img" />
+
+                <!-- TVRating - To display the rating given by the user -->
+
+                <TextView
+                    android:id="@+id/TVFeedbackTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginEnd="72dp"
+                    android:text="Leave your feedback here !!"
+                    android:textColor="#673AB7"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toTopOf="@+id/TVRating"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.303"
+                    tools:textSize="20dp" />
+
+                <RatingBar
+                    android:id="@+id/RateBarFeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="76dp"
+                    android:layout_marginEnd="74dp"
+                    android:layout_marginBottom="11dp"
+                    app:layout_constraintBottom_toTopOf="@+id/ETFeedback"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.454"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/IVFeedback"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:isIndicator="false"
+                    tools:numStars="5"
+                    tools:progressTint="#F3ECEC11"
+                    tools:rating="4.5"
+                    tools:secondaryProgressTint="#f2f2f2"
+                    tools:stepSize="0.5" />
+
+                <TextView
+                    android:id="@+id/TVRating"
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="92dp"
+                    android:layout_marginTop="416dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/ETFeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your feedback here"
+                    android:textColorHint="#A39C9C"
+                    app:layout_constraintBottom_toTopOf="@+id/BTNFeedback"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TVRating" />
+
+                <Button
+                    android:id="@+id/BTNFeedback"
+                    android:layout_width="123dp"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="103dp"
+                    android:backgroundTint="#B538CA"
+                    android:text="Submit Review"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.59"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ETFeedback"
+                    tools:layout_height="wrap_content"
+                    tools:layout_width="wrap_content" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
